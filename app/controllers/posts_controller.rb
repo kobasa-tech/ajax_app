@@ -10,7 +10,9 @@ class PostsController < ApplicationController
   # end
 
   def create
-    Post.create(content: params[:content])
-    redirect_to action: :index # メモ内容保存後トップページへリダイレクトする。
+    post = Post.create(content: params[:content])
+    render json:{post: post}
+    # render json:{キー: 値} jsonオプションでpostというキーとセットで変数postの値をJSON形式で返却している
+    # Ajaxを用いた非同期通信のレスポンスではJSON形式のデータそのものを返している。
   end
 end
