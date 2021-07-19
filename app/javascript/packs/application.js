@@ -7,7 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("../memo.js") //memo.jsを読み込むよう追記。../は1つ上の階層を意味する。
+require("../memo") //memo.jsを読み込むよう追記。../は1つ上の階層を意味する。
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
